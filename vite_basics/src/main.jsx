@@ -11,14 +11,6 @@ function MyApp(){
     )
 }
 
-// const ReactElement = {
-//     type: 'a',
-//     props: {
-//         href: 'https://google.com',
-//         target: '_blank'
-//     },
-//     children: 'Click me to visit google'
-// }
 
 const anotherElement = (
     <a href="https://google.com" target='_blank'>Visit google</a>
@@ -26,17 +18,16 @@ const anotherElement = (
 
 
 
-const anotherUser = "chai aur react"
+const anotherUser = "Click here "
 
 const reactElement = React.createElement(
     'a',
     {href: 'https://google.com',target: '_blank' },
-    'click me to visit google',
+    anotherUser,
     anotherElement//this is called evaluated expression
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- 
-    reactElement
-  
+ reactElement
+
 )

@@ -1,29 +1,21 @@
 function customRender(reactElement,mainContainer)
 {
-    /* 1st method of adding the element
-    const domElement=document.createElement(reactElement.type)
-    domElement.innerHTML=reactElement.children
-    domElement.setAttribute('href',reactElement.props.href)
-    domElement.setAttribute('target',reactElement.props.target)
-    mainContainer.appendChild(domElement)
-    */
-   const domElement=document.createElement(reactElement.type)
-   domElement.innerHTML=reactElement.children
-   for (const prop in reactElement.props) {
-    if(prop=='children') continue;
+const domElement=document.createElement(reactElement.type)
+domElement.innerHTML=reactElement.children
+for (const prop in reactElement.props ) {
+    if(prop=='children')continue;
     domElement.setAttribute(prop,reactElement.props[prop])
-   }
-   mainContainer.appendChild(domElement)
-   
 }
-const reactElement=
-{
-    type:"a",
+mainContainer.appendChild(domElement)
+}
+const reactElement={
+    type:'a',
     props:{
-        href:"https://google.com",
-        target:"_blank"
+        href:'https://www.google.com',
+        target:'_blank'
     },
-    children:"Click here to visit Google"
+    children:"Visit Google"
 }
-const mainContainer=document.getElementById('root')
+
+const element=document.getElementById('root')
 customRender(reactElement,mainContainer)
