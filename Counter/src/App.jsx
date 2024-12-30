@@ -16,7 +16,18 @@ const [counter, setCounter] = useState(8);
 const addValue=()=>
 {
   if(counter<20)
-  setCounter(counter+1)
+ 
+
+  //This approach will update the counter value by 1 only even if we write it four times this is because React is asynchronus it doesnt update the value directly 
+  setCounter(counter + 1);  
+  setCounter(counter + 1); 
+  setCounter(counter + 1);  
+  setCounter(counter + 1);  
+   //This approach will update the couter by 4 on single click
+  setCounter(counter=>counter+1)
+  setCounter(counter=>counter+1)
+  setCounter(counter=>counter+1)
+  setCounter(counter=>counter+1)
 }
 const removeValue=()=>
 {
