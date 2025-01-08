@@ -1,11 +1,12 @@
-
+import ThemeProvider from "./Components/contexts/ThemeProvider";
+import ThemeSwitcher from "./Components/contexts/ThemeSwitcher";
 
 function App() {
   return (
-    <>
-      <h1>My name is Nishant</h1>
-    </>
-  )
+    <ThemeProvider>
+      <ThemeSwitcher />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
