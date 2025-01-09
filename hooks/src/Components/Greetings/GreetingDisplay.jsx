@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext } from "react";                                                                                                                  
 import GreetingContext from "./GreetingContext";
-
-// Component to display the greeting message
-const GreetingDisplay = () => {
-  const greeting = useContext(GreetingContext); // Access the greeting message
-
-  return <p>{greeting}</p>;
-};
-
-export default GreetingDisplay;
+const GreetingDisplay=()=>
+{
+    const greetings=useContext(GreetingContext)
+    return(
+        <h1>{greetings}</h1>
+    )
+}
+export default GreetingDisplay

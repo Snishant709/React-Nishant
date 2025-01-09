@@ -1,3 +1,3 @@
 import React, { createContext } from "react";
-const GreetingContext=createContext();
-export default GreetingContext;
+const GreetingContext=createContext()
+export default GreetingContext
