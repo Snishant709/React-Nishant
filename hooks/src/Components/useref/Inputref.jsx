@@ -8,7 +8,6 @@ const Inputref = () =>
     {
         inputRef.current.focus()
         setCount(count+1)
-
     }
 
     const reset=()=>
