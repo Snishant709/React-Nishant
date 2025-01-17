@@ -10,6 +10,7 @@ function InputBox({
     amountDisable = false,
     currencyDisable = false,
     className = "",
+
 }) {
    const amountInputId = useId()
 
@@ -26,7 +27,15 @@ function InputBox({
                     placeholder="Amount"
                     disabled={amountDisable}
                     value={amount}
-                    onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+                    onChange={(e) => {
+                        const parsedValue = Number(e.target.value);
+                        if (parsedValue > 0) {
+                          onAmountChange && onAmountChange(parsedValue);
+                        } else {
+                          onAmountChange && onAmountChange(0);
+                        }
+                      }}
+                      
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
