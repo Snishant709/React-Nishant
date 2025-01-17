@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 function UseCurrencyInfo(currency) {
   const [data, setData] = useState({});
+  
 
   useEffect(() => {
     fetch(`https://currency-api.pages.dev/v1/currencies/${currency}.json`)
