@@ -8,6 +8,7 @@ import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
+import Gihub ,{githubInfoLoader} from './components/Github/Github.jsx'
 
 
 //1st method for rendering the reactRouter elements
@@ -41,6 +42,7 @@ const router=createBrowserRouter(
       <Route path='about' element={<About/>}/>
       <Route path='contact-us' element={<Contact/>}/>
       <Route path='User/:user' element={<User/>}/>
+      <Route loader={githubInfoLoader} path='github' element={<Gihub/>}/>
     </Route>
   )
 )
